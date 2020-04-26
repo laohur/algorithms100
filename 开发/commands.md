@@ -11,8 +11,8 @@
 ## command
 cd cp grep cat awk rm chmod  free top cmake bash systemctl
 netstat ip addr mount scp get wget rsync curl 
-tar -xvzf name.tar.gz -C /opt/tomcat tar ,  zxvf FileName.tar.gz
-unzip name.zip -d name
+tar -czvf test.tar.gz a.c && tar -xzvf test.tar.gz 
+zip -r mydata.zip mydata  && unzip name.zip -d name
 
 ## setup
 grub界面长按shirft进入grub菜单
