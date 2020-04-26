@@ -39,9 +39,12 @@ make
 make install
 
 ## tool
-docker sleep infinity 
-conda
-pip
+### docker sleep infinity 
+docker run -it --rm -u root  torchserve:1.0 /bin/bash
+docker-compsoe up --build && exec serveice1 sh
+
+## conda install remove
+pip install uninstall
 java
 git clone add commit push checkout branch switch
  
