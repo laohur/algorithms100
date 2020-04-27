@@ -15,6 +15,9 @@ tar -czvf test.tar.gz a.c && tar -xzvf test.tar.gz
 zip -r mydata.zip mydata  && unzip name.zip -d name
 
 ## setup
+nano /etc/default/console-setup 
+XKBMODEL="SKIP" XKBLAYOUT="us" XKBVARIANT="U.S. English" XKBOPTIONS="" -->
+ XKBMODEL="pc105" XKBLAYOUT="us" XKBVARIANT="" XKBOPTIONS=""
 grub界面长按shirft进入grub菜单
 sudo nano /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="i8042.reset quiet splash"
