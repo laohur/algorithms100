@@ -43,7 +43,7 @@ make install
 
 ## tool
 ### docker sleep infinity 
-docker run -it --rm -u root  torchserve:1.0 /bin/bash
+docker run -it --rm -u root -v /workspace:/home/user/project/ torchserve:1.0 /bin/bash
 docker-compsoe up --build && exec serveice1 sh
 
 ## conda install remove
