@@ -15,13 +15,27 @@ tar -czvf test.tar.gz a.c && tar -xzvf test.tar.gz
 zip -r mydata.zip mydata  && unzip name.zip -d name
 
 ## setup
-nano /etc/default/console-setup 
-XKBMODEL="SKIP" XKBLAYOUT="us" XKBVARIANT="U.S. English" XKBOPTIONS="" -->
- XKBMODEL="pc105" XKBLAYOUT="us" XKBVARIANT="" XKBOPTIONS=""
 grub界面长按shirft进入grub菜单
 sudo nano /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="i8042.reset quiet splash"
 sudo update-grub
+
+### keyboard
+COPY ./keyboard /etc/default/keyboard
+XKBMODEL="pc105"
+XKBLAYOUT="us"
+XKBVARIANT=""
+XKBOPTIONS=""
+BACKSPACE="guess"
+
+>
+Add to RUN /usr/sbin/dpkg-reconfigure keyboard-configuration or /usr/bin/apt-get install -y --reinstall keyboard-configuration
+localectl set-keymap en_US.UTF-8
+systemctl restart keyboard-setup.service
+Try removing ENV DEBIAN_FRONTEND=noninteractive and you should be able to enter input.
+Maybe consider localectl set-keymap en_US.UTF-8 and systemctl restart keyboard-setup.service
+
+
 
 nano /etc/environment   
 nano /etc/systemd/logind.conf
