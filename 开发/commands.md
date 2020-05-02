@@ -18,6 +18,8 @@ zip -r mydata.zip mydata  && unzip name.zip -d name
 grub界面长按shirft进入grub菜单
 sudo nano /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="i8042.reset quiet splash"
+i8042.reset i8042.nomux i8042.nopnp i8042.noloo 
+i8042.nomux=1 i8042.reset nomodeset
 sudo update-grub
 
 ### keyboard
