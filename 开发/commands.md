@@ -22,26 +22,9 @@ i8042.reset i8042.nomux i8042.nopnp i8042.noloo
 i8042.nomux=1 i8042.reset nomodeset
 sudo update-grub
 
-### keyboard
-COPY ./keyboard /etc/default/keyboard
-XKBMODEL="pc105"
-XKBLAYOUT="us"
-XKBVARIANT=""
-XKBOPTIONS=""
-BACKSPACE="guess"
-
->
-Add to RUN /usr/sbin/dpkg-reconfigure keyboard-configuration or /usr/bin/apt-get install -y --reinstall keyboard-configuration
-localectl set-keymap en_US.UTF-8
-systemctl restart keyboard-setup.service
-Try removing ENV DEBIAN_FRONTEND=noninteractive and you should be able to enter input.
-Maybe consider localectl set-keymap en_US.UTF-8 and systemctl restart keyboard-setup.service
-
-
-
 nano /etc/environment   
 nano /etc/systemd/logind.conf
-#HandleLidSwitch合上笔记本盖后的行为，默认suspend（改为lock；即合盖不休眠）
+HandleLidSwitch=lock
 运行：systemctl restart systemd-logind 就会生效。
 
 apt-get install openssh-server
