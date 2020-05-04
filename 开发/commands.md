@@ -34,11 +34,16 @@ sudo passwd root
 ssh-keygenu生成公钥私钥于{userhome}/.ssh/config
 sudo systemctl restart sshd
 
-拖动程序文件，或者复制路径至终端执行
-apt-get install gcc
-./configure  config
-make 
-make install
+How to to run sudo command without a password:
+
+    Backup your /etc/sudoers file by typing the following command:
+    sudo cp /etc/sudoers /root/sudoers.bak
+    Edit the /etc/sudoers file by typing the visudo command:
+    sudo visudo
+    Append/edit the line as follows in the /etc/sudoers file for user named ‘vivek’ to run ‘/bin/kill’ and ‘systemctl’ commands:
+    vivek ALL = NOPASSWD: /bin/systemctl restart httpd.service, /bin/kill
+    Save and exit the file.
+
 
 ## tool
 ### docker sleep infinity 
