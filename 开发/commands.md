@@ -57,4 +57,4 @@ git clone add commit push checkout branch switch
  
  ## mirror
  pip install -i http://pypi.douban.com/simple/ pip -U && pip config set global.index-url http://pypi.douban.com/simple/ && pip config set global.trusted-host  pypi.douban.com
-
+https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
