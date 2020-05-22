@@ -27,6 +27,7 @@ nano /etc/systemd/logind.conf
 HandleLidSwitch=lock
 运行：systemctl restart systemd-logind 就会生效。
 
+终端输入命令sudo visudo，打开 visudo；找到 %sudo ALL=(ALL:ALL) ALL 这一行修改为%sudo ALL=(ALL:ALL) NOPASSWD:ALL 
 apt-get install openssh-server
 /etc/ssh/sshd.conf
 PermitRootLogin without-password 修改为 PermitRootLogin yes
