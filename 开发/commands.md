@@ -18,11 +18,10 @@ zip -r mydata.zip mydata  && unzip name.zip -d name
 grub界面长按shirft进入grub菜单
 sudo nano /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="i8042.reset quiet splash"
-i8042.reset i8042.nomux i8042.nopnp i8042.noloo 
-i8042.nomux=1 i8042.reset nomodeset
+#i8042.reset i8042.nomux i8042.nopnp i8042.noloo 
+#i8042.nomux=1 i8042.reset nomodeset
 sudo update-grub
 
-nano /etc/environment   
 nano /etc/systemd/logind.conf
 HandleLidSwitch=lock
 运行：systemctl restart systemd-logind 就会生效。
@@ -34,16 +33,6 @@ PermitRootLogin without-password 修改为 PermitRootLogin yes
 sudo passwd root
 ssh-keygenu生成公钥私钥于{userhome}/.ssh/config
 sudo systemctl restart sshd
-
-How to to run sudo command without a password:
-
-    Backup your /etc/sudoers file by typing the following command:
-    sudo cp /etc/sudoers /root/sudoers.bak
-    Edit the /etc/sudoers file by typing the visudo command:
-    sudo visudo
-    Append/edit the line as follows in the /etc/sudoers file for user named ‘vivek’ to run ‘/bin/kill’ and ‘systemctl’ commands:
-    vivek ALL = NOPASSWD: /bin/systemctl restart httpd.service, /bin/kill
-    Save and exit the file.
 
 
 ## tool
