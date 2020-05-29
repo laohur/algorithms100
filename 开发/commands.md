@@ -36,7 +36,8 @@
 
 ## tool
 ### docker sleep infinity 
- sudo docker run -it --rm -u root -v /home/local:/workspace image1 /bin/bash
+/etc/docker/daemon.json
+sudo docker run -it --rm -u root -v /home/local:/workspace image1 /bin/bash
  docker-compsoe up --build && exec serveice1 sh
 
 ## conda install remove
