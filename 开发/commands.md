@@ -47,3 +47,6 @@
  ## mirror
   pip install -i http://pypi.douban.com/simple/ pip -U && pip config set global.index-url http://pypi.douban.com/simple/ && pip config set global.trusted-host  pypi.douban.com
  https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
+  pip install -i https://mirrors.aliyun.com/pypi/simple/ pip -U & pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U & pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
