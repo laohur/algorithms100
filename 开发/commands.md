@@ -40,14 +40,17 @@
 sudo docker run -it --rm -u root -v /home/local:/workspace image1 /bin/bash
  docker-compsoe up --build && exec serveice1 sh
 
-## conda install remove
- pip install uninstall
  java
  git clone add commit push checkout branch switch
  
- ## mirror
-  pip install -i http://pypi.douban.com/simple/ pip -U && pip config set global.index-url http://pypi.douban.com/simple/ && pip config set global.trusted-host  pypi.douban.com
- https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
-  pip install -i https://mirrors.aliyun.com/pypi/simple/ pip -U & pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+## python
+pip install virtualenv virtualenvwrapper
+virtualenv -p python3 py3
+source ~/py3/bin/activate
 
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U & pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+https://www.cnblogs.com/freely/p/8022923.html
+
+ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U 
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
