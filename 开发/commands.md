@@ -54,3 +54,13 @@ https://www.cnblogs.com/freely/p/8022923.html
 
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U 
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+## 关闭swap
+  .# 查看是否有swap（返回空表示没有），也可以使用 top/free 查看
+  sudo swapon --show
+  .# 关掉 swap 
+  sudo swapoff -v /swap.img 
+  .# 修改 fstab ，取消启动挂载
+  vim /etc/fstab 
+  .# 删除交换分区文件
+  rm -rf /swap.img
