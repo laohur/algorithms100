@@ -9,10 +9,10 @@
      粘贴命令：Shift + Insert  组合键　　或　　单击鼠标滚轮即为粘贴。
 
 ## command
- cd cp grep cat awk rm chmod  free top cmake bash systemctl
- netstat ip addr mount scp get wget rsync curl 
- tar -czvf test.tar.gz a.c && tar -xzvf test.tar.gz 
- zip -r mydata.zip mydata  && unzip name.zip -d name
+ cd cp grep cat awk rm chmod  free top cmake bash systemctl    
+ netstat ip addr mount scp get wget rsync curl     
+ tar -czvf test.tar.gz a.c && tar -xzvf test.tar.gz     
+ zip -r mydata.zip mydata  && unzip name.zip -d name    
 find * -name "*" | xargs dos2unix    
 
 ## setup
