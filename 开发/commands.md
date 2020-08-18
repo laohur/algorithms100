@@ -13,6 +13,7 @@
  netstat ip addr mount scp get wget rsync curl 
  tar -czvf test.tar.gz a.c && tar -xzvf test.tar.gz 
  zip -r mydata.zip mydata  && unzip name.zip -d name
+find * -name "*" | xargs dos2unix    
 
 ## setup
  grub界面长按shirft进入grub菜单
