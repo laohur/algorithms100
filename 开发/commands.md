@@ -34,9 +34,9 @@ find * -name "*" | xargs dos2unix
 
 ## tool
 ### docker sleep infinity 
-/etc/docker/daemon.json
-sudo docker run -it --rm  -v ~:/tmp ubuntu:latest /bin/bash
- docker-compsoe up --build && exec serveice1 sh
+/etc/docker/daemon.json    
+sudo docker run -it --rm  -v ~:/tmp ubuntu:latest /bin/bash    
+ docker-compsoe up --build && exec serveice1 sh    
 
  java
  git clone add commit push checkout branch switch
