@@ -35,7 +35,7 @@ find * -name "*" | xargs dos2unix
 ## tool
 ### docker sleep infinity 
 /etc/docker/daemon.json
-sudo docker run -it --rm  -v /home/local:/workspace image1 /bin/bash
+sudo docker run -it --rm  -v ~:/tmp ubuntu:latest /bin/bash
  docker-compsoe up --build && exec serveice1 sh
 
  java
@@ -47,7 +47,6 @@ virtualenv -p python3 py3
 source ~/py3/bin/activate
 
 https://www.cnblogs.com/freely/p/8022923.html
-
  https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U 
