@@ -35,7 +35,7 @@ find * -name "*" | xargs dos2unix
 ## tool
 ### docker sleep infinity 
 /etc/docker/daemon.json
-sudo docker run -it --rm -u root -v /home/local:/workspace image1 /bin/bash
+sudo docker run -it --rm  -v /home/local:/workspace image1 /bin/bash
  docker-compsoe up --build && exec serveice1 sh
 
  java
