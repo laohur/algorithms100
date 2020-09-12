@@ -42,9 +42,9 @@ sudo docker run -it --rm  -v ~:/tmp ubuntu:latest /bin/bash
  git clone add commit push checkout branch switch
  
 ## python
-pip install virtualenv virtualenvwrapper
-virtualenv -p python3 py3
-source ~/py3/bin/activate
+pip install virtualenv virtualenvwrapper     
+virtualenv -p python3 py3     
+source ~/py3/bin/activate   
 
 https://www.cnblogs.com/freely/p/8022923.html
  https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
