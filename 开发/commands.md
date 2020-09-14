@@ -61,3 +61,4 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
   vim /etc/fstab     
   .# 删除交换分区文件    
   rm -rf /swap.img    
+  du -h -d 1 # 文件占用空间    
