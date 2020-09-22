@@ -37,7 +37,7 @@ find * -name "*" | xargs dos2unix
 /etc/docker/daemon.json    
 sudo docker run -it --rm  -v ~:/tmp ubuntu:latest /bin/bash    
  docker-compsoe up --build && exec serveice1 sh    
-
+apt update && apt install apt-transport-https ca-certificates -y     
  java
  git clone add commit push checkout branch switch
  
