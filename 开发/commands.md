@@ -48,6 +48,7 @@ apt update && apt install apt-transport-https ca-certificates -y
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U 
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
+swapoff -a
 ## 关闭swap    
   .# 查看是否有swap（返回空表示没有），也可以使用 top/free 查看    
   sudo swapon --show    
