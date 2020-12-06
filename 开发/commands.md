@@ -42,11 +42,7 @@ apt update && apt install apt-transport-https ca-certificates -y
  git clone add commit push checkout branch switch
  
 ## python
-pip install virtualenv virtualenvwrapper     
-virtualenv -p python3 py3     
-source ~/py3/bin/activate   
 
-https://www.cnblogs.com/freely/p/8022923.html
  https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U 
