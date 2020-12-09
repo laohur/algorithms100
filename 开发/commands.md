@@ -10,55 +10,34 @@
 
 ## command
  cd cp grep cat awk rm chmod  free top cmake bash systemctl    
- netstat ip addr mount scp get wget rsync curl     
+  ip  mount scp get wget rsync curl     
  tar -czvf test.tar.gz a.c && tar -xzvf test.tar.gz     
  zip -r mydata.zip mydata  && unzip name.zip -d name    
 find * -name "*" | xargs dos2unix    
 
-## setup
- grub界面长按shirft进入grub菜单
- sudo nano /etc/default/grub
- GRUB_CMDLINE_LINUX_DEFAULT="i8042.nomux=1 i8042.reset  quiet splash"
- #i8042.reset i8042.nomux i8042.nopnp i8042.noloo 
- sudo update-grub
+ssh systemctl journal 
+sleep infinity 
+cp sources.list /etc/apt/sources.list
+swapoff -a
 
- nano /etc/systemd/logind.conf
- HandleLidSwitch=lock
- 运行：systemctl restart systemd-logind 就会生效。
-
-
- apt-get install openssh-server
- ssh-keygenu生成公钥私钥于{userhome}/.ssh/config
- sudo systemctl restart sshd
-
-
-## tool
-### docker sleep infinity 
 /etc/docker/daemon.json    
 sudo docker run -it --rm  -v ~:/tmp ubuntu:latest /bin/bash    
  docker-compsoe up --build && exec serveice1 sh    
-apt update && apt install apt-transport-https ca-certificates -y     
  java
  git clone add commit push checkout branch switch
+ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
  
-## python
+ ## function
+ 
+ def exec(cmd):
+    with os.popen(f"sudo {cmd}") as p:
+        doc= p.readlines()
+    doc=[x.strip() for x in doc]
+    logger.info(f"执行{cmd} --> {doc}  ")
+    return doc
 
- https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
-
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U 
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-
-swapoff -a
-## 关闭swap    
-  .# 查看是否有swap（返回空表示没有），也可以使用 top/free 查看    
-  sudo swapon --show    
-  .# 关掉 swap     
-  sudo swapoff -v /swap.img     
-  .# 修改 fstab ，取消启动挂载    
-  vim /etc/fstab     
-  .# 删除交换分区文件    
-  rm -rf /swap.img    
-  du -h -d 1 # 文件占用空间    
-  
+   
 ## wifi
 https://linuxconfig.org/ubuntu-20-04-connect-to-wifi-from-command-line    
+frp
+
